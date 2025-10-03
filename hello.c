@@ -9,13 +9,15 @@ int main(){
     multiline comment*/
 
     int age = 20;
-    float mark = 90%;
-    char letter = 'S';
+    float mark = 90;
+    char grade = 'S';
     printf("my age is %d\n", age);
     printf("my mark is %f\n", mark);
-    printf("my letter is %c\n", letter);
-    
+    printf("my grade is %c\n", grade);
+
     //damn vs cod can predict your entire mindset maybe :)
     //just use tab and it will simply just guess if thats what i meant
+
+    printf("so im %d years old and my mark is %.2f and my grade is %c\n", age, mark, grade);
     return 0;
 }
