@@ -30,5 +30,29 @@
 			printf("The average marks obtained in subject %d is: %.2f\n", i, average/5);
 		}
 
-		return 0;
+		
+
+
+	// now time to learn the if conditioning
+
+	int a = 1;
+	int b = 2;
+	if (a < b){
+		printf("a is less than b\n");
+	}
+	else{
+		printf("a is greater than b\n");
+	}
+    printf("a = %d, b = %d\n", a, b);
+	a++;
+	b--;
+	if (a == b){
+		printf("a is equal to b\n");
+	}
+	else{
+		printf("a is not equal to b\n");
+	}
+
+	printf("a = %d, b = %d\n", a, b);
+	return 0;
 	}
