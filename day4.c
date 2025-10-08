@@ -1,34 +1,34 @@
 	#include <stdio.h>
 
+	// Define constants for the number of subjects and grades
+	#define SUBJECTS 2
+	#define GRADES 5
+
 	int main() {
-		/* TODO: declare the 2D array grades here */
-        int grades[2][5];
 		float average;
 		int i;
 		int j;
 
-		grades[0][0] = 80;
-		grades[0][1] = 70;
-		grades[0][2] = 65;
-		grades[0][3] = 89;
-		grades[0][4] = 90;
-
-		grades[1][0] = 85;
-		grades[1][1] = 80;
-		grades[1][2] = 80;
-		grades[1][3] = 82;
-		grades[1][4] = 87;
+		// Initialize the 2D array in a more concise way
+		int grades[SUBJECTS][GRADES] = {
+			{80, 70, 65, 89, 90},
+			{85, 80, 80, 82, 87}
+		};
 
 		/* TODO: complete the for loop with appropriate terminating conditions */
-		for (i = 0; i < 2 ; i++) {
+		// Use the defined constants in the loop conditions
+		for (i = 0; i < SUBJECTS; i++) {
 			average = 0;
-			for (j = 0; j < 5 ; j++) {
+			for (j = 0; j < GRADES; j++) {
 				average += grades[i][j];
 			}
 
 			/* TODO: compute the average marks for subject i */
-			printf("The average marks obtained in subject %d is: %.2f\n", i, average/5);
+			printf("The average marks obtained in subject %d is: %.2f\n", i, average / GRADES);
 		}
+
+		// You can add a return statement here to stop the program's execution.
+		// The code below this line will not be executed.
 
 		
 
@@ -54,5 +54,18 @@
 	}
 
 	printf("a = %d, b = %d\n", a, b);
-	return 0;
+
+
+	// lets build a a system where i take input and based on the given age i will decide whether he can vote or not
+	int age;
+	printf("enter your age\n");
+	fflush(stdout); // Force the "enter your age" message to be printed
+	scanf("%d", &age);
+	if (age >= 18){
+		printf("you can vote\n");
 	}
+	else{
+		printf("you can't vote\n");
+	}
+	return 0;
+}
